@@ -1,9 +1,7 @@
-<div>   <app-navbar></app-navbar> </div>
-    
 <div class="row">
     <div class="col-md-6">
         <div ng-controller="">
-                <label>Buscar Publicador</label>
+                <label>Consultas</label>
                 <input class="form-control mr-sm-2" placeholder="search in data base" type="text">
                  
         </div>
@@ -13,7 +11,7 @@
         (click)="mostrar=!mostrar">
         Cargar Publicador</button>
         <hr>
-        <div *ngIf="mostrar" class="card card-inverse card-primary mb-3 text-center" align="left">
+        <div *ngIf="mostrar" class="card card-inverse card-primary mb-3 text-center">
             <div class="card-block">
               <blockquote class="card-blockquote">
                 <p>{{objeto.mensajeInicial}}</p>
