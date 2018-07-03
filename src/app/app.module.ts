@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {APP_ROUTING} from './app.routes';
 
 // servicios
-
+ import { PublisherService } from './Services/Publisher.service';
 
 // components
 
@@ -17,7 +17,6 @@ import { HomePageComponent } from './Components/home/home-page/home-page.compone
 import { BodyLiteraturaComponent } from './Components/PageLiteratura/body-literatura/body-literatura.component';
 import {PageOrganizationComponent} from './Components/PageOrganization/page-organization/page-organization.component';
 import { ConsultasComponent } from './Components/PageOrganization/consultas/consultas.component';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule, APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    PublisherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
