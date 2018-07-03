@@ -1,35 +1,35 @@
-<div class="row">
-    <div class="col-md-6">
-        <div ng-controller="">
-                <label>Consultas</label>
+<div class='animated fadeIn'>
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-controller="">
+                <label>busquedas</label>
                 <input class="form-control mr-sm-2" placeholder="search in data base" type="text">
-                 
-        </div>
-        
-        <hr>
-        <button type="button" class="btn btn-outline-primary btn-block"
-        (click)="mostrar=!mostrar">
+
+            </div>
+
+            <hr>
+            <button type="button" class="btn btn-outline-primary btn-block" (click)="mostrar=!mostrar">
         Cargar Publicador</button>
-        <hr>
-        <div *ngIf="mostrar" class="card card-inverse card-primary mb-3 text-center">
-            <div class="card-block">
-              <blockquote class="card-blockquote">
-                <p>{{objeto.mensajeInicial}}</p>
-                <div>{{objeto.tipo}}</div>
-                <p> "Tiempo: {{Informe.horas}} horas"</p>
-                <footer>{{objeto.autor}}</footer>
-              </blockquote>
+            <hr>
+            <div *ngIf="mostrar" class="card card-inverse card-primary mb-3 text-center">
+                <div class="card-block">
+                    <blockquote class="card-blockquote">
+                        <p>{{objeto.mensajeInicial}}</p>
+                        <div>{{objeto.tipo}}</div>
+                        <p> "Tiempo: {{Informe.horas}} horas"</p>
+                        <footer>{{objeto.autor}}</footer>
+                    </blockquote>
+                </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <h1>Nuevo Publicador</h1>
+            <hr>
+            <ul class="list-group">
+                <li *ngFor="let persona of personas; let i=index" class="list-group-item">{{i+1}}.{{persona}}</li>
+            </ul>
+        </div>
+
+
     </div>
-    <div class="col-md-6">
-        <h1>Nuevo Publicador</h1>
-        <hr>
-        <ul class="list-group">
-            <li *ngFor="let persona of personas; let i=index" class="list-group-item" >{{i+1}}.{{persona}}</li>                               
-        </ul>
-    </div>   
-
-    
 </div>
-
