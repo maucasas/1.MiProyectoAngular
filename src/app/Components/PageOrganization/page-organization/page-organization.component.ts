@@ -7,12 +7,11 @@ import { PublisherService, Publicador } from '../../../Services/Publisher.servic
   styleUrls: ['./page-organization.component.css']
 })
 export class PageOrganizationComponent implements OnInit {
-
   publicador: Publicador [] = [];
   constructor(private _servicePublisher: PublisherService) { }
-
-  ngOnInit() {
+    ngOnInit() {
     this.publicador = this._servicePublisher.getPublisher();
 console.log(this.publicador);
   }
+
 }

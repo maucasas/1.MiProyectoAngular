@@ -17,7 +17,7 @@ export class PublisherService {
     constructor () {
         console.log( 'Servicio Listo para  usar' );
     }
-    getPublisher() {
+    getPublisher(): Publicador [] {
         return this.publicadores;
     }
     }

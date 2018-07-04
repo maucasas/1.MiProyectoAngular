@@ -1,6 +1,6 @@
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
-    <button type="button" class="btn btn-primary" href="">Consultas</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['consultas']">Consultas</button>
 
     <button type="button" class="btn btn-primary" [routerLink]="['Estadisticas']">Estadisticas</button>
 
@@ -25,9 +25,24 @@
 </div>
 <div class="jumbotron animated fadeIn">
     <!-- fadeIn: es un efecto css para darle apraciencia de movimiento a la pagina en la entrada se puede usar con la propiedad fast -->
-    <h1 class="display-4">Page Congregación</h1>
+    <h1 class="display-4">Page Organanization</h1>
     <p class="lead">Aplicacion de prueba.</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>s
+    <div class="card">
+
+        <div id='img'>
+            <img class="card-img-top" src="../../../../assets/img/icon-search.png" alt="Card image cap">
+
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
