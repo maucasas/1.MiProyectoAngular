@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//Rutas
+// Rutas
 import {APP_ROUTING} from './app.routes';
 
-//servicios
+// servicios
 
 
-//components
+// components
 
 import { AppComponent } from './app.component';
 import { Headercomponent } from './Components/home/header/header.component';
@@ -15,7 +15,7 @@ import { FooterComponent } from './Components/home/footer/footer.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomePageComponent } from './Components/home/home-page/home-page.component';
 import { BodyLiteraturaComponent } from './Components/PageLiteratura/body-literatura/body-literatura.component';
-import {PageOrganizationComponent} from './Components/PageOrganization/page-organization/page-organization.component'
+import {PageOrganizationComponent} from './Components/PageOrganization/page-organization/page-organization.component';
 
 
 @NgModule({
@@ -28,10 +28,9 @@ import {PageOrganizationComponent} from './Components/PageOrganization/page-orga
     HomePageComponent,
     BodyLiteraturaComponent,
     PageOrganizationComponent
-    
   ],
   imports: [
-    BrowserModule,  
+    BrowserModule,
     APP_ROUTING
   ],
   providers: [],
