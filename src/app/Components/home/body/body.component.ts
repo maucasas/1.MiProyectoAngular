@@ -2,13 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-body',
-    templateUrl: './body.component.html',
-    styleUrls: ['../../PageOrganization/page-organization/page-organization.component.css']
-
-
-
-
-})
+    templateUrl: './body.component.html'})
 export class BodyComponent {
 
     // tslint:disable-next-line:no-inferrable-types

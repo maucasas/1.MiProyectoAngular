@@ -1,13 +1,17 @@
 import {RouterModule, Routes} from '@angular/router';
-import {HomePageComponent} from './Components/home/home-page/home-page.component';
-import {BodyLiteraturaComponent} from './Components/PageLiteratura/body-literatura/body-literatura.component';
-import {PageOrganizationComponent} from './Components/PageOrganization/page-organization/page-organization.component';
+import {HomePageComponent} from './Components/home/homepage/homepage.component';
+import {OrganizationComponent} from './Components/PageOrganization/organizacion/organization.component';
+import { LiteraturaComponent } from './Components/literatura/literatura.component';
+import { PublisherComponent } from './Components/PageOrganization/publisher/publisher.component';
+import { GroupsComponent } from './Components/PageOrganization/groups/groups.component';
 
 
 const APP_ROUTES: Routes = [
     {path: 'homePage', component: HomePageComponent },
-    {path: 'literatura', component: BodyLiteraturaComponent },
-    {path: 'organization', component: PageOrganizationComponent },
+    {path: 'organization', component: OrganizationComponent },
+    {path: 'literatura', component: LiteraturaComponent },
+    {path: 'publisher/:id', component: PublisherComponent },
+    {path: 'groups/:id', component: GroupsComponent },
     {path: '**', pathMatch: 'full', redirectTo: 'homePage'}
 ];
 
