@@ -10,16 +10,15 @@ import { IPublicador } from '../../../Services/Publisher.service';
   styleUrls: ['./groups.component.css']
 })
 export class GroupsComponent implements OnInit {
-  public grupos: IPublicador [] = [];
+  public grupos: any;
 
   constructor( private activatedRoute: ActivatedRoute, private groupsService: GroupsService )  {
-      this.activatedRoute.params.subscribe(params => {
-      this.grupos = groupsService.getByGroupsPublicadores(params['id']);
-      console.log(this.grupos);
-    });
   }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      this.grupos = this.groupsService.getByGroups(params['id']);
+    });
   }
 
 }

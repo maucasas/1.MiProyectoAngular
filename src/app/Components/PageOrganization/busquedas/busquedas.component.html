@@ -1,0 +1,26 @@
+<h1>Buscando | <small> {{ word }} </small> </h1>
+<hr>
+
+<div class="row" *ngIf="encontrados.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info"> No se encontraron resultados para la busqueda: {{word}}</div>
+    </div>
+</div>
+
+<div class="row" *ngIf="encontrados.length > 0">
+    <div class="col-md-6" *ngFor="let encontrado of encontrados">
+
+        <h3>{{encontrado.nombre}} {{encontrado.apellido}} decicacion: ({{encontrado.dedicacion}})</h3>
+        <hr>
+        <p>codigo</p>
+        <h4>{{encontrado.codigo}}</h4>
+        <p>asignación</p>
+        <h4>{{encontrado.tipo}}</h4>
+        <p>grupo</p>
+        <h4> G {{encontrado.grupo}}</h4>
+        <button type="button" class="btn btn-danger" (click)="verPublicador(encontrado.codigo)">Ver</button>
+        <div *ngIf="mostrar" class="card-danger card-inverse mb-3 text-left">
+
+        </div>
+    </div>
+</div>

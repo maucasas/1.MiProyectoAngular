@@ -4,6 +4,8 @@ import {OrganizationComponent} from './Components/PageOrganization/organizacion/
 import { LiteraturaComponent } from './Components/literatura/literatura.component';
 import { PublisherComponent } from './Components/PageOrganization/publisher/publisher.component';
 import { GroupsComponent } from './Components/PageOrganization/groups/groups.component';
+import { InformesComponent } from './Components/PageOrganization/informes/informes.component';
+import { BusquedasComponent } from './Components/PageOrganization/busquedas/busquedas.component';
 
 
 const APP_ROUTES: Routes = [
@@ -12,6 +14,8 @@ const APP_ROUTES: Routes = [
     {path: 'literatura', component: LiteraturaComponent },
     {path: 'publisher/:id', component: PublisherComponent },
     {path: 'groups/:id', component: GroupsComponent },
+    {path: 'informes', component: InformesComponent },
+    {path: 'busquedas/:word', component: BusquedasComponent },
     {path: '**', pathMatch: 'full', redirectTo: 'homePage'}
 ];
 

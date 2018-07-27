@@ -1,18 +1,11 @@
 <p>
-    groups works!
+    Grupos Organizados!
 </p>
+<div>
+    <button [routerLink]="['/organization']" class="btn btn-outline-info block"> << Regresar</button>
+</div>
 
 
-<div class="card-columns">
-    <div class="card" *ngFor="let pub of grupos ; index as i">
-        <img class="card-img-top" src="../../../../assets/img/icon-search.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{pub.grupo}}</h5>
-            <p class="card-text">{{pub.nombre}}</p>
-            <p class="card-text">{{pub.sexo}}</p>
-            <p class="card-text">{{pub.celular}}</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-        <a [routerLink]="['/publisher',i]" class="btn btn-outline-primary">Ver mas...</a>
-    </div>
+<div class="card">
+    <app-card-publisher *ngFor="let pub of grupos ; index as i" [publicador]="pub"></app-card-publisher>
 </div>

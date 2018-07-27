@@ -9,12 +9,11 @@ import { PublisherService } from '../../../Services/Publisher.service';
 })
 export class PublisherComponent implements OnInit {
   publicador: any = {};
-
+  mostrar = false;
   constructor( private activatedRoute: ActivatedRoute, publisherService: PublisherService) {
     this.activatedRoute.params.subscribe(params => {
     this.publicador = publisherService.getPublicador( params['id'] );
-    console.log(this.publicador);
-  });
+ });
 }
   ngOnInit() {
   }

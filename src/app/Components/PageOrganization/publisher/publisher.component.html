@@ -1,3 +1,28 @@
-<p>
-  publisher works!
-</p>
+<div class="row">
+    <div class="col-md-4">
+        <img class="card-img-top" src="../../../../assets/img/icon-search.png" [alt]="publicador.nombre">
+    </div>
+    <div class="col-md-6">
+        <p>nombre</p>
+        <h3>{{publicador.nombre}} {{publicador.apellido}} decicacion: ({{publicador.dedicacion}})</h3>
+        <hr>
+        <p>asignación</p>
+        <h4>{{publicador.tipo}}</h4>
+        <p>grupo</p>
+        <h4> G {{publicador.grupo}}</h4>
+        <button type="button" class="btn btn-danger column" (click)="mostrar = !mostrar">Ver Ultimo Informe</button>
+        <button type="button" class="btn btn-danger column" (click)="mostrar = !mostrar">Ingresar Informe</button>
+
+        <div *ngIf="mostrar" class="card-danger card-inverse mb-3 text-left">
+            <div class="card-block">
+                <blockquote class="card-subtitle">
+                    <p>{{publicador.nombre}}</p>
+                    <div>{{publicador.tipo}}</div>
+                    <p>"Tiempo: 100 horas"</p>
+                    <footer>cualquier cosa</footer>
+
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>

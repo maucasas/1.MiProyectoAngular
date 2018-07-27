@@ -21,6 +21,9 @@ import { OrganizationComponent } from './Components/PageOrganization/organizacio
 import { LiteraturaComponent } from './Components/literatura/literatura.component';
 import { PublisherComponent } from './Components/PageOrganization/publisher/publisher.component';
 import { GroupsComponent } from './Components/PageOrganization/groups/groups.component';
+import { InformesComponent } from './Components/PageOrganization/informes/informes.component';
+import { BusquedasComponent } from './Components/PageOrganization/busquedas/busquedas.component';
+import { CardPublisherComponent } from './Components/PageOrganization/card-publisher/card-publisher.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { GroupsComponent } from './Components/PageOrganization/groups/groups.com
     OrganizationComponent,
     LiteraturaComponent,
     PublisherComponent,
-    GroupsComponent
+    GroupsComponent,
+    InformesComponent,
+    BusquedasComponent,
+    CardPublisherComponent
     ],
   imports: [
     BrowserModule, APP_ROUTING
