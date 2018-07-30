@@ -1,28 +1,90 @@
 <!-- El padre de esta tarjeta es grupos y publisher -->
 
 
-<div class="card-group">
-    <div class="card-body">
-        <h5 class="card-title">Grupo {{ publicador.grupo}}</h5>
-        <p class="card-text">{{publicador.nombre | uppercase}}</p>
-        <p class="card-text">{{publicador.sexo}}</p>
-        <p class="card-text">{{ publicador.celular }}</p>
-        <p class="card-text">{{publicador.dedicacion }}</p>
-        <button type="button" class="btn btn-danger" (click)="mostrar = !mostrar">Ver Ultimo Informe</button>
-        <button type="button" class="btn btn-personalizado" (click)="mostrar = !mostrar">Ingresar Informe</button>
 
-        <div *ngIf="mostrar" class="card-danger card-inverse mb-3 text-left">
+<div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+    <div class="card-header">{{publicador.nombre}} {{publicador.apellido}}</div>
+    <div class="card-body">
+        <h5 class="card-title">Grupo {{publicador.grupo}}</h5>
+
+        <div class="col-sm-auto">
+            <button type="button" class="btn btn-danger" (click)="mostrar = !mostrar">Ver Ultimo Informe</button>
+            <button type="button" class="btn btn-personalizado" (click)="informe = !informe">Ingresar Informe</button>
+
+            <div *ngIf="(mostrar)" class="card-danger card-inverse mb-3 text-left">
+                <div class="card-block">
+                    <blockquote class="card-subtitle">
+                        <p>ultimo informe</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div *ngIf="(informe)" class="card-danger card-inverse mb-3 text-left">
+                <div class="card-block">
+                    <blockquote class="card-subtitle">
+                        <app-datepicker-views-selection><input></app-datepicker-views-selection>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 
+
+<div class="card-group">
+    <div class="col-sm-2" style="background-color:lavender;">
+        <h3>Grupo {{ publicador.grupo}}</h3>
+    </div>
+    <span class="border-info"></span>
+    <div class="col-sm-2" style="background-color:lavenderblush;">{{publicador.nombre | uppercase}}</div>
+    <div class="col-sm-2" style="background-color:lavender;">{{publicador.sexo}}</div>
+    <div class="col-sm-2" style="background-color:lavender;">{{ publicador.celular }}</div>
+    <div class="col-sm-2" style="background-color:lavender;">{{publicador.dedicacion }}</div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col">
+        <a [routerLink]="['/publisher']" class="btn btn-outline-primary">Ver mas...</a>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-danger" (click)="mostrar = !mostrar">Ver Ultimo Informe</button>
+        <button type="button" class="btn btn-personalizado" (click)="informe = !informe">Ingresar Informe</button>
+
+        <div *ngIf="(mostrar)" class="card-danger card-inverse mb-3 text-left">
             <div class="card-block">
                 <blockquote class="card-subtitle">
-                    <p>{{publicador.nombre}}</p>
-                    <div>{{publicador.tipo}}</div>
-                    <p>"Tiempo: 100 horas"</p>
-                    <footer>cualquier cosa</footer>
-
+                    <p>ultimo informe</p>
                 </blockquote>
             </div>
         </div>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div *ngIf="(informe)" class="card-danger card-inverse mb-3 text-left">
+            <div class="card-block">
+                <blockquote class="card-subtitle">
+                    <app-datepicker-views-selection><input></app-datepicker-views-selection>
+                </blockquote>
+            </div>
+        </div>
     </div>
-    <a [routerLink]="['/publisher']" class="btn btn-outline-primary">Ver mas...</a>
-</div>
+
+
+
+
+
+
+
+</div> -->

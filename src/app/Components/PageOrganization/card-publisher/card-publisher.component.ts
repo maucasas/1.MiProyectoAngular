@@ -9,6 +9,7 @@ import { IPublicador } from '../../../Services/Publisher.service';
 export class CardPublisherComponent implements OnInit {
 @Input() publicador: IPublicador;
 mostrar = false;
+informe = false;
   constructor() { }
 
   ngOnInit() {

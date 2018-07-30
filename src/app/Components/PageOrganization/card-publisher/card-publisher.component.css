@@ -4,4 +4,10 @@
 
 .btn-personalizado {
     background: coral;
+    height: 40px;
+    margin: 10px;
+}
+
+.col-sm-50 {
+    margin: 10px;
 }

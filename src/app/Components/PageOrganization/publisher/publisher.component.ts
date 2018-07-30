@@ -9,8 +9,6 @@ import { PublisherService } from '../../../Services/Publisher.service';
 })
 export class PublisherComponent implements OnInit {
   publicador: any = {};
-  mostrar = false;
-  informe = false;
   constructor( private activatedRoute: ActivatedRoute, publisherService: PublisherService) {
     this.activatedRoute.params.subscribe(params => {
     this.publicador = publisherService.getPublicador( params['id'] );

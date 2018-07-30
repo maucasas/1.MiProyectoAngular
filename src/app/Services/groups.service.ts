@@ -10,32 +10,32 @@ import { element } from 'protractor';
 })
 export class GroupsService {
 
-  private publicadores: IPublicador [] = [];
+  private publicadores: IPublicador[] = [];
   private groups;
-  public groupsCount: string [] = ['1', '2', '3', '4', '5', '6', '7', '8'];
+  public groupsCount: string[] = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
-  constructor( private publisherService: PublisherService ) {
-      this.publicadores = publisherService.getPublicadores();
-   }
+  constructor(private publisherService: PublisherService) {
+    this.publicadores = publisherService.getPublicadores();
+  }
   getGroup(idx: number) {
     return this.groups[idx];
   }
 
   getByGroupsPublicadores(idx: number) {
     return this.publicadores;
-    }
+  }
 
-    getByGroups(idx: number) {
-     const groupsPub: IPublicador [] = [];
-     let grupo: number;
-     for ( const pub of this.publicadores) {
-        grupo = pub.grupo;
-       if ( grupo === idx ) {
+  getByGroups(idx: number) {
+    const groupsPub: IPublicador[] = [];
+    let grupo: number;
+    for (const pub of this.publicadores) {
+      grupo = pub.grupo;
+      if (grupo == idx) {
         groupsPub.push(pub);
-       } else  {console.log('no hay elementos'); }
-     }
-     return groupsPub;
+      }
     }
+    return groupsPub;
+  }
 }
 export interface IGrupo {
   publicador: IPublicador;
