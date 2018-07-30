@@ -27,12 +27,10 @@ export class GroupsService {
 
     getByGroups(idx: number) {
      const groupsPub: IPublicador [] = [];
-     let grupo = {};
+     let grupo: number;
      for ( const pub of this.publicadores) {
         grupo = pub.grupo;
-       console.log('grupo:', grupo);
-       console.log('idx:', idx);
-       if ( grupo == idx ) {
+       if ( grupo === idx ) {
         groupsPub.push(pub);
        } else  {console.log('no hay elementos'); }
      }

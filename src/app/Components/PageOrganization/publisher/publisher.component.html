@@ -11,7 +11,7 @@
         <p>grupo</p>
         <h4> G {{publicador.grupo}}</h4>
         <button type="button" class="btn btn-danger column" (click)="mostrar = !mostrar">Ver Ultimo Informe</button>
-        <button type="button" class="btn btn-danger column" (click)="mostrar = !mostrar">Ingresar Informe</button>
+        <button type="button" class="btn btn-danger column" (click)="informe = !informe" onchange="mostrar=false">Ingresar Informe</button>
 
         <div *ngIf="mostrar" class="card-danger card-inverse mb-3 text-left">
             <div class="card-block">
@@ -20,6 +20,16 @@
                     <div>{{publicador.tipo}}</div>
                     <p>"Tiempo: 100 horas"</p>
                     <footer>cualquier cosa</footer>
+
+                </blockquote>
+            </div>
+        </div>
+        <div *ngIf="(informe)" class="card-danger card-inverse mb-3 text-left">
+            <div class="card-block">
+                <blockquote class="card-subtitle">
+                    <app-datepicker-views-selection><input></app-datepicker-views-selection>
+
+
 
                 </blockquote>
             </div>

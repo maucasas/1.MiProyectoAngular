@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgDatepickerModule } from 'ng2-datepicker';
 // Rutas
 import {APP_ROUTING} from './app.routes';
 
@@ -24,6 +25,8 @@ import { GroupsComponent } from './Components/PageOrganization/groups/groups.com
 import { InformesComponent } from './Components/PageOrganization/informes/informes.component';
 import { BusquedasComponent } from './Components/PageOrganization/busquedas/busquedas.component';
 import { CardPublisherComponent } from './Components/PageOrganization/card-publisher/card-publisher.component';
+import { DatepickerViewsSelectionComponent } from './datepicker-views-selection/datepicker-views-selection.component';
+
 
 @NgModule({
   declarations: [
@@ -39,10 +42,12 @@ import { CardPublisherComponent } from './Components/PageOrganization/card-publi
     GroupsComponent,
     InformesComponent,
     BusquedasComponent,
-    CardPublisherComponent
+    CardPublisherComponent,
+    DatepickerViewsSelectionComponent,
     ],
   imports: [
-    BrowserModule, APP_ROUTING
+    BrowserModule, APP_ROUTING, NgDatepickerModule
+
   ],
   providers: [
     PublisherService

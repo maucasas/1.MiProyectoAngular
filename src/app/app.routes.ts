@@ -6,6 +6,7 @@ import { PublisherComponent } from './Components/PageOrganization/publisher/publ
 import { GroupsComponent } from './Components/PageOrganization/groups/groups.component';
 import { InformesComponent } from './Components/PageOrganization/informes/informes.component';
 import { BusquedasComponent } from './Components/PageOrganization/busquedas/busquedas.component';
+import { DatepickerViewsSelectionComponent } from './datepicker-views-selection/datepicker-views-selection.component';
 
 
 const APP_ROUTES: Routes = [
@@ -16,6 +17,8 @@ const APP_ROUTES: Routes = [
     {path: 'groups/:id', component: GroupsComponent },
     {path: 'informes', component: InformesComponent },
     {path: 'busquedas/:word', component: BusquedasComponent },
+    {path: 'date', component: DatepickerViewsSelectionComponent },
+
     {path: '**', pathMatch: 'full', redirectTo: 'homePage'}
 ];
 
