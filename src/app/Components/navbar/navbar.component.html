@@ -16,7 +16,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" placeholder="Buscar Publicador" #cajaTexto>
+            <input class="form-control mr-sm-2" placeholder="Buscar Publicador" #cajaTexto (keyup)="buscarPublicador(cajaTexto.value)">
             <button class="btn btn-outline-info my-2 my-sm-0" type="button" (click)="buscarPublicador(cajaTexto.value)">Buscar</button>
         </form>
     </div>

@@ -17,8 +17,8 @@ export class OrganizationComponent implements OnInit {
     this.groups = this.groupsService.groupsCount;
     }
 
-  VerPublicador(idx: number) {
-    this.router.navigate(['/publisher', idx]); // router nos permite movernos a cualquier pagina desde un boton
+  VerPublicador(cod: number) {
+    this.router.navigate(['/publisher', cod]); // router nos permite movernos a cualquier pagina desde un boton
   }
   VerGroup(idx: number) {
     this.router.navigate(['/groups', idx]);

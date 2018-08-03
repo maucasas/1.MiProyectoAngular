@@ -7,5 +7,5 @@
 
 
 <div class="card">
-    <app-card-publisher *ngFor="let pub of grupos ; index as i" [publicador]="pub"></app-card-publisher>
+    <app-card-publisher (publicadorSeleccionado)="verPublicador( $event )" *ngFor="let pub of grupos ; index as i" [publicador]="pub" [codigo]="pub.codigo"></app-card-publisher>
 </div>

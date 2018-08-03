@@ -83,9 +83,17 @@ export class PublisherService {
         return this.publicadores;
     }
 
-    getPublicador(idx: number) {
-        return this.publicadores[idx];
-    }
+    getPublicador(cod: string) {
+        let publicador: IPublicador;
+        for (const pub of this.publicadores) {
+            const codigo = pub.codigo.toLowerCase();
+            const codentry = cod.toLowerCase();
+            if ( codigo === codentry) {
+               publicador = pub;
+            }
+        }
+        return publicador;
+        }
     busquedasPublicador( word: string ) {
         const pubEncontrado: IPublicador [] = [];
         word = word.toLowerCase();
@@ -112,5 +120,5 @@ export interface IPublicador {
     celular: string;
     grupo: number;
     dedicacion: string;
-    codigo: Identifiers;
+    codigo: string;
 }

@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
     {path: 'homePage', component: HomePageComponent },
     {path: 'organization', component: OrganizationComponent },
     {path: 'literatura', component: LiteraturaComponent },
-    {path: 'publisher/:id', component: PublisherComponent },
+    {path: 'publisher/:cod', component: PublisherComponent },
     {path: 'groups/:id', component: GroupsComponent },
     {path: 'informes', component: InformesComponent },
     {path: 'busquedas/:word', component: BusquedasComponent },

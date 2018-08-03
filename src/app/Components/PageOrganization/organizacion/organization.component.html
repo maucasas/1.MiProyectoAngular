@@ -1,6 +1,5 @@
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
-    <button (click)="VerPublicador(1)" type="button" class="btn btn-primary">Consultas</button>
 
     <button type="button" class="btn btn-primary" [routerLink]="['estadisticas']">Estadisticas</button>
 
@@ -27,8 +26,8 @@
             <p class="card-text">{{pub.celular}}</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
-        <a [routerLink]="['/publisher',i]" class="btn btn-outline-primary">Ver mas...</a>
+        <a [routerLink]="['/publisher', pub.codigo]" class="btn btn-outline-primary">Ver mas...</a>
 
-        <button (click)="VerPublicador(i)" type="button" class="btn-btn-primary btn-block position-relative">Ver Publicador</button>
+        <button (click)="VerPublicador(pub.codigo)" type="button" class="btn-btn-primary btn-block position-relative">Ver Publicador</button>
     </div>
 </div>
