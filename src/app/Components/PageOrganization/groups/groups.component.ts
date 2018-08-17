@@ -17,7 +17,7 @@ export class GroupsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.grupos = this.groupsService.getByGroups(params['id']);
+    this.grupos = this.groupsService.getByGroups(params['id']);
     });
   }
 

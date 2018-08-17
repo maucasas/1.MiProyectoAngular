@@ -1,8 +1,6 @@
 import { Injectable, NgModule } from '@angular/core';
 import { IPublicador, PublisherService } from './Publisher.service';
-import { forEach } from '../../../node_modules/@angular/router/src/utils/collection';
 import { IGrupo } from './groups.service';
-import { element } from 'protractor';
 
 
 @Injectable({
